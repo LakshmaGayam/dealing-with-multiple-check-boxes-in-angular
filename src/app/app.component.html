@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<form>
+  <div *ngFor="let item of checkedArray;let i=index">
+    <input type="checkbox" name="roleName{{i}}" (change)="onChange($event,item,i)">{{item.name}}
+  </div>
+  <button (click)="onButtonSubmit()">Submit</button>
+</form>
